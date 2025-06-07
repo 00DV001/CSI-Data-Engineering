@@ -1,34 +1,24 @@
 #task3, https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=true
 def minion_game(string):
-    # your code goes here
     S = string.upper()
-    all_words = []
+    n = len(S)
+    kevin_score = 0
+    stuart_score = 0
+    vowels = 'AEIOU'
 
-    for i in range(len(S)):
-        for j in range(i+1,len(S)+1):
-            all_words.append(S[i:j])
+    for i in range(n):
+        if S[i] in vowels:
+            kevin_score += (n - i)
+        else:
+            stuart_score += (n - i)
 
-    vowels = ['A','E','I','O','U']
-    score_count = 0
-
-    for vowel in all_words:
-        if vowel[0] in vowels:
-            score_count+=1
-    
-    vscore = score_count
-    score_count=0
-
-    for consonant in all_words:
-        if consonant[0] not in vowels:
-            score_count+=1
-    cscore = score_count
-    
-    if vscore > cscore:
-        print("Kevin", vscore)
-    elif vscore < cscore:
-        print("Stuart", cscore)
+    if kevin_score > stuart_score:
+        print("Kevin", kevin_score)
+    elif stuart_score > kevin_score:
+        print("Stuart", stuart_score)
     else:
         print("Draw")
+
 if __name__ == '__main__':
-    s = input()
-    minion_game(s)
+  s = input()
+  minion_game(s)

@@ -1,7 +1,7 @@
 #task5, https://www.hackerrank.com/challenges/iterables-and-iterators/problem?isFullScreen=true
 from itertools import combinations as comb
 N = int(input())
-input_str = input()
+input_str = input() #'a a c d'
 L1 = list(input_str.replace(" ", ""))[:N]
 
 r = int(input()) #selected no of indices
