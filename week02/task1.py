@@ -1,4 +1,5 @@
-#task1, https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true
+#task1, https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true 
+
 import string
 def solve(s):
     print(string.capwords(s,sep= ' '))
