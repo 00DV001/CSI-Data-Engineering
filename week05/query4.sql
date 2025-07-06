@@ -1,29 +1,25 @@
-CREATE PROCEDURE dbo.GenerateAndCreateTable
-    @TableName NVARCHAR(128)
-AS
-BEGIN
-    DECLARE @SQL NVARCHAR(MAX) = ''
+-- clear tables from dv01/dv-destination
+DELETE FROM Students;
+DELETE FROM Teachers;
 
-    SELECT @SQL = 'IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = ''' + @TableName + ''')
-    BEGIN
-        CREATE TABLE [' + @TableName + '] ('
+-- 
+CREATE TABLE TableColumnMap (
+    TableName NVARCHAR(100),
+    ColumnList NVARCHAR(MAX)
+);
+-- copy tables in tableColumnMap
+INSERT INTO TableColumnMap (TableName, ColumnList)
+VALUES
+('Students', 'StudentID, FirstName'),
+('Teachers', 'TeacherID, Subject');
 
-    SELECT @SQL = @SQL +
-        COLUMN_NAME + ' ' +
-        DATA_TYPE +
-        CASE 
-            WHEN CHARACTER_MAXIMUM_LENGTH IS NOT NULL AND DATA_TYPE IN ('nvarchar', 'varchar', 'char') THEN '(' + 
-                CASE WHEN CHARACTER_MAXIMUM_LENGTH = -1 THEN 'MAX' ELSE CAST(CHARACTER_MAXIMUM_LENGTH AS VARCHAR) END + ')'
-            WHEN DATA_TYPE IN ('decimal', 'numeric') THEN '(' + 
-                CAST(NUMERIC_PRECISION AS VARCHAR) + ',' + CAST(NUMERIC_SCALE AS VARCHAR) + ')'
-            ELSE ''
-        END +
-        CASE WHEN IS_NULLABLE = 'NO' THEN ' NOT NULL,' ELSE ',' END
-    FROM INFORMATION_SCHEMA.COLUMNS
-    WHERE TABLE_NAME = @TableName
+-- lookup > settings > use query > table column map
+SELECT TableName, ColumnList FROM TableColumnMap
 
-    -- Remove last comma, close the CREATE TABLE
-    SET @SQL = LEFT(@SQL, LEN(@SQL) - 1) + ') END'
+-- creating dummy table in source dv01-db1
+CREATE TABLE DummyTable (
+    DummyCol VARCHAR(10)
+);
 
-    EXEC sp_executesql @SQL
-END
+-- override with sql query copy activity in pipeline
+@concat('SELECT ', item().ColumnList, ' FROM ', item().TableName)
