@@ -30,23 +30,23 @@ Before you begin:
 2. Create:
    - **Azure SQL Database** linked service (use SQL authentication or Microsoft Entra ID)
    - **Azure Blob Storage** linked service (use Account Key authentication)
-[1.1](/week05/screenshots/img%20task1%20(1).png)
-[1.2](/week05/screenshots/img%20task1%20(2).png)
-[1.3](/week05/screenshots/img%20task1%20(3).png)
-[1.4](/week05/screenshots/img%20task1%20(4).png)
-[1.5](/week05/screenshots/img%20task1%20(5).png)
-[1.6](/week05/screenshots/img%20task1%20(6).png)
-[1.7](/week05/screenshots/img%20task1%20(7).png)
-[1.8](/week05/screenshots/img%20task1%20(8).png)
-[1.9](/week05/screenshots/img%20task1%20(9).png)
-[1.10](/week05/screenshots/img%20task1%20(10).png)
-[1.11](/week05/screenshots/img%20task1%20(11).png)
-[1.12](/week05/screenshots/img%20task1%20(12).png)
-[1.13](/week05/screenshots/img%20task1%20(13).png)
-[1.14](/week05/screenshots/img%20task1%20(14).png)
-[1.15](/week05/screenshots/img%20task1%20(15).png)
-[1.16](/week05/screenshots/img%20task1%20(16).png)
-[1.17](/week05/screenshots/img%20task1%20(17).png)
+![1.1](/week05/screenshots/img%20task1%20(1).png)
+![1.2](/week05/screenshots/img%20task1%20(2).png)
+![1.3](/week05/screenshots/img%20task1%20(3).png)
+![1.4](/week05/screenshots/img%20task1%20(4).png)
+![1.5](/week05/screenshots/img%20task1%20(5).png)
+![1.6](/week05/screenshots/img%20task1%20(6).png)
+![1.7](/week05/screenshots/img%20task1%20(7).png)
+![1.8](/week05/screenshots/img%20task1%20(8).png)
+![1.9](/week05/screenshots/img%20task1%20(9).png)
+![1.10](/week05/screenshots/img%20task1%20(10).png)
+![1.11](/week05/screenshots/img%20task1%20(11).png)
+![1.12](/week05/screenshots/img%20task1%20(12).png)
+![1.13](/week05/screenshots/img%20task1%20(13).png)
+![1.14](/week05/screenshots/img%20task1%20(14).png)
+![1.15](/week05/screenshots/img%20task1%20(15).png)
+![1.16](/week05/screenshots/img%20task1%20(16).png)
+![1.17](/week05/screenshots/img%20task1%20(17).png)
 ---
 
 ### Step 2: Create Source Dataset (SQL Table)
@@ -57,10 +57,10 @@ Before you begin:
    - Table: Select your existing table (e.g., `Students`)
 3. Name it `SqlInputDataset`
 
-[1.18](/week05/screenshots/img%20task1%20(18).png)
-[1.19](/week05/screenshots/img%20task1%20(19).png)
-[1.20](/week05/screenshots/img%20task1%20(20).png)
-[1.21](/week05/screenshots/img%20task1%20(21).png)
+![1.18](/week05/screenshots/img%20task1%20(18).png)
+![1.19](/week05/screenshots/img%20task1%20(19).png)
+![1.20](/week05/screenshots/img%20task1%20(20).png)
+![1.21](/week05/screenshots/img%20task1%20(21).png)
 ---
 
 ### Step 3: Create Sink Datasets
@@ -85,7 +85,7 @@ Repeat the following for each format:
 
 Name them: `CsvSinkDataset`, `ParquetSinkDataset`, and `AvroSinkDataset`.
 
-[1.22](/week05/screenshots/img%20task1%20(22).png)
+![1.22](/week05/screenshots/img%20task1%20(22).png)
 
 ---
 
@@ -103,9 +103,9 @@ For each:
 
  Tip: To run them **simultaneously**, don’t connect them with arrows
 
-[1.23](/week05/screenshots/img%20task1%20(23).png)
-[1.24](/week05/screenshots/img%20task1%20(24).png)
-[1.25](/week05/screenshots/img%20task1%20(25).png)
+![1.23](/week05/screenshots/img%20task1%20(23).png)
+![1.24](/week05/screenshots/img%20task1%20(24).png)
+![1.25](/week05/screenshots/img%20task1%20(25).png)
 ---
 
 ### Step 5: Validate and Publish
@@ -113,7 +113,7 @@ For each:
 1. Click **Validate All**
 2. Click **Publish All**
 
-[1.26](/week05/screenshots/img%20task1%20(26).png)
+![1.26](/week05/screenshots/img%20task1%20(26).png)
 ---
 
 ### Step 6: Debug or Trigger the Pipeline
@@ -127,7 +127,7 @@ For each:
 
 Azure Blob Storage should contain: data file in csv, avro and parquet
 
-[1.27](/week05/screenshots/img%20task1%20(27).png)
+![1.27](/week05/screenshots/img%20task1%20(27).png)
 
 ---
 
@@ -162,7 +162,7 @@ This enables both **batch** and **real-time automation** of your data pipeline w
 ### PART 1: Add a **Schedule Trigger**
 
 > Run the pipeline automatically at a set time (e.g., daily at 5:00 PM)
-[2.1](/week05/screenshots/img%20task2%20(1).png)
+![2.1](/week05/screenshots/img%20task2%20(1).png)
 
 ### Step 1: Open Your Pipeline
 
@@ -185,9 +185,9 @@ This enables both **batch** and **real-time automation** of your data pipeline w
 
 Click **Next**, bind our pipeline, and click **OK**
 
-[2.2](/week05/screenshots/img%20task2%20(2).png)
-[2.3](/week05/screenshots/img%20task2%20(5).png)
-[2.4](/week05/screenshots/img%20task2%20(6).png)
+![2.2](/week05/screenshots/img%20task2%20(2).png)
+![2.3](/week05/screenshots/img%20task2%20(5).png)
+![2.4](/week05/screenshots/img%20task2%20(6).png)
 
 ### Step 4: Publish
 
@@ -198,7 +198,7 @@ Click **Publish All**
 ### PART 2: Add an **Event-Based Trigger**
 
 > Trigger the pipeline when a `.csv` file is uploaded to a specific folder in Blob Storage
-[2.5](/week05/screenshots/img%20task2%20(7).png)
+![2.5](/week05/screenshots/img%20task2%20(7).png)
 
 ### Step 1: Go to Manage > Triggers > + New
 
@@ -216,8 +216,8 @@ Click **Publish All**
 | Blob path ends with    | `.csv`                        |
 | Event type             | `Blob Created`                |
 
-[2.6](/week05/screenshots/img%20task2%20(8).png)
-[2.7](/week05/screenshots/img%20task2%20(9).png)
+![2.6](/week05/screenshots/img%20task2%20(8).png)
+![2.7](/week05/screenshots/img%20task2%20(9).png)
 
 
 ### Step 3: Bind Pipeline and Parameters
@@ -250,10 +250,10 @@ input/csv/students_live_2025.csv
 2. Go to **Monitor > Pipeline Runs**
 3. Verify the pipeline was triggered and the file was processed
 
-[2.8](/week05/screenshots/img%20task2%20(11).png)
-[2.9](/week05/screenshots/img%20task2%20(13).png)
-[2.10](/week05/screenshots/img%20task2%20(12).png)
-[2.11](/week05/screenshots/img%20task2%20(14).png)
+![2.8](/week05/screenshots/img%20task2%20(11).png)
+![2.9](/week05/screenshots/img%20task2%20(13).png)
+![2.10](/week05/screenshots/img%20task2%20(12).png)
+![2.11](/week05/screenshots/img%20task2%20(14).png)
 ---
 
 # Task 3 - Full Table Replication Using Azure Data Factory
@@ -288,21 +288,21 @@ This ensures:
   ```sql
   SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'
   ```
-[3.1](/week05/screenshots/img%20task3%20(8).png)
+![3.1](/week05/screenshots/img%20task3%20(8).png)
 
 ---
 
 ### 2. **ForEach Activity (`loopOverTables`)**
 - Iterates over each table name returned by the Lookup
 - Dynamically triggers a Copy Data activity for each table
-[3.2](/week05/screenshots/img%20task3%20(11).png)
+![3.2](/week05/screenshots/img%20task3%20(11).png)
 ---
 
 ### 3. **Copy Data Activity (`copyTableData`)**
 - Uses a parameterized dummy source and sink dataset
 - Copies all data from each source table to its corresponding destination table
-[3.3](/week05/screenshots/img%20task3%20(9).png)
-[3.4](/week05/screenshots/img%20task3%20(10).png)
+![3.3](/week05/screenshots/img%20task3%20(9).png)
+![3.4](/week05/screenshots/img%20task3%20(10).png)
 ---
 
 ## Datasets
@@ -316,20 +316,20 @@ This ensures:
   ```sql
   @concat('SELECT * FROM ', item().TABLE_NAME)
   ```
-[3.5](/week05/screenshots/img%20task3%20(6).png)
+![3.5](/week05/screenshots/img%20task3%20(6).png)
 ### 🔹 `DS_Destination_Generic`
 - Type: Azure SQL Database
 - Table: `dbo.DummyTable`
 - Parameters:
   - `TableName` (String)
-[3.6](/week05/screenshots/img%20task3%20(7).png)
+![3.6](/week05/screenshots/img%20task3%20(7).png)
 ---
 
 ## Linked Services
 
 - `LS_SQL_Source`: Linked to source Azure SQL Database
 - `LS_SQL_Destination`: Linked to destination Azure SQL Database
-[3.7](/week05/screenshots/img%20task3%20(4).png)
+![3.7](/week05/screenshots/img%20task3%20(4).png)
 
 ---
 
@@ -374,9 +374,9 @@ This table is never queried during execution due to dynamic SQL override.
 
 - Dynamically replicates **all user-defined tables and their data** from source to destination
 - No hardcoded table names — pipeline adapts to schema changes automatically
-[3.8](/week05/screenshots/img%20task3%20(12).png)
-[3.9](/week05/screenshots/img%20task3%20(13).png)
-[3.10](/week05/screenshots/img%20task3%20(14).png)
+![3.8](/week05/screenshots/img%20task3%20(12).png)
+![3.9](/week05/screenshots/img%20task3%20(13).png)
+![3.10](/week05/screenshots/img%20task3%20(14).png)
 ---
 
 
@@ -437,20 +437,20 @@ This drives the entire dynamic copy process.
     { "TableName": "Teachers", "ColumnList": "TeacherID, Subject" }
   ]
   ```
-[4.1](/week05/screenshots/img%20task4%20(1).png)
+![4.1](/week05/screenshots/img%20task4%20(1).png)
 ---
 
 ### 2. **ForEach Activity (`loopOverTableColumnMap`)**
 - Iterates over each row of the control table
 - Passes `TableName` and `ColumnList` to the Copy activity
-[4.2](/week05/screenshots/img%20task4%20(6).png)
+![4.2](/week05/screenshots/img%20task4%20(6).png)
 
 ---
 
 ### 3. **Copy Data Activity (`copySelectedColumns`)**
 - Uses dummy datasets and dynamic SQL to copy **only selected columns**
 - Works for each table/column pair
-[4.3](/week05/screenshots/img%20task4%20(5).png)
+![4.3](/week05/screenshots/img%20task4%20(5).png)
 ---
 
 ## Datasets
@@ -479,8 +479,8 @@ This drives the entire dynamic copy process.
 - `LS_SQL_Source`: Source Azure SQL DB
 - `LS_SQL_Destination`: Destination Azure SQL DB
 
-[4.4](/week05/screenshots/img%20task4%20(4).png)
-[4.5](/week05/screenshots/img%20task4%20(5).png)
+![4.4](/week05/screenshots/img%20task4%20(4).png)
+![4.5](/week05/screenshots/img%20task4%20(5).png)
 
 ---
 
@@ -524,8 +524,8 @@ CREATE TABLE DummyTable (
 - Dynamically copies only **selected columns** from **selected tables**
 - Entire logic driven by a control table
 - No hardcoding — fully dynamic and reusable pipeline
-[4.6](/week05/screenshots/img%20task4%20(10).png)
-[4.7](/week05/screenshots/img%20task4%20(9).png)
-[4.8](/week05/screenshots/img%20task4%20(11).png)
+![4.6](/week05/screenshots/img%20task4%20(10).png)
+![4.7](/week05/screenshots/img%20task4%20(9).png)
+![4.8](/week05/screenshots/img%20task4%20(11).png)
 
 ---
