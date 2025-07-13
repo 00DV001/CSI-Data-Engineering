@@ -109,6 +109,13 @@ Pipelines orchestrate the data movement activities.
 6.  Connect to your **Azure SQL Database** using a tool like Azure Data Studio or SSMS.
 7.  **Confirm that the data has been successfully loaded** into your destination table.
 
+## Screenshots:
+
+![1.1](/week06/screenshots/setup.png)
+![1.2](/week06/screenshots/task%201-1.png)
+![1.3](/week06/screenshots/task%201-2.png)
+![1.4](/week06/screenshots/task%201-3.png)
+
 # Task 2: FTP/SFTP to Azure Blob Storage Data Extraction with Azure Data Factory (ADF)
 
 ## Overview
@@ -215,6 +222,12 @@ Pipelines orchestrate the data movement activities.
 2.  Go to **Containers**.
 3.  Open the container you specified as the destination in your sink dataset.
 4.  **Verify that the file(s)** downloaded from the FTP/SFTP server now exist in your Azure Blob Storage container and that their content is correct.
+
+## Screenshots:
+
+![2.1](/week06/screenshots/task%202-1.png)
+![2.2](/week06/screenshots/task%202-2.png)
+![2.3](/week06/screenshots/task%202-3.png)
 
 # Task 3: Incremental Data Load and Daily Automation with Azure Data Factory (ADF)
 
@@ -385,6 +398,14 @@ Automate the pipeline to run daily.
 7.  **Attach this trigger to your pipeline** by selecting your incremental load pipeline.
 8.  **Publish all changes** in ADF Studio to activate the trigger and schedule.
 
+## Screenshots:
+
+![3.1](/week06/screenshots/task%203-1.png)
+![3.2](/week06/screenshots/task%203-2.png)
+![3.3](/week06/screenshots/task%203-3.png)
+![3.4](/week06/screenshots/task%203-4.png)
+![3.5](/week06/screenshots/task%203-5.png)
+
 # Task 4: Automating a Pipeline for the Last Saturday of the Month in Azure Data Factory
 
 ## Overview
@@ -523,6 +544,13 @@ This method leverages a SQL stored procedure or script within your database to p
 4.  Monitor the **Pipeline runs** associated with this trigger.
 5.  On Saturdays that are *not* the last Saturday of the month, you should see the pipeline run, but the activities within the "If True" branch should not execute. On the last Saturday of the month, all activities should run successfully.
 
+## Screenshots:
+
+![4.1](/week06/screenshots/task%204-1.png)
+![4.2](/week06/screenshots/task%204-2.png)
+![4.3](/week06/screenshots/task%204-3.png)
+
+
 # Task 5: Graceful Data Retrieval Failure Handling with Retry and Wait Logic in Azure Data Factory
 
 ## Overview
@@ -619,3 +647,7 @@ Thorough testing is critical to ensure your retry logic behaves as expected.
     * Examine the pipeline runs and activity runs. You should see the activities retrying.
     * Check the activity output and status to verify that the retry intervals and counts are respected.
 3.  **Check Logs and Alerts:** If you have integrated with Azure Monitor or logging solutions, verify that failure details and retry attempts are being logged.
+
+## Screenshots:
+
+![5.1](/week06/screenshots/task%205.png)
