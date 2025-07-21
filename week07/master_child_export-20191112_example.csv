@@ -1,0 +1,5 @@
+MasterAccountID,ChildAccountID,RelationshipType,Status
+ACC_MASTER_01,ACC_CHILD_01A,Parent,Active
+ACC_MASTER_01,ACC_CHILD_01B,Subsidiary,Active
+ACC_MASTER_02,ACC_CHILD_02A,Parent,Inactive
+ACC_MASTER_03,ACC_CHILD_03A,Holding,Active

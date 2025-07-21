@@ -1,0 +1,5 @@
+CustomerID,FirstName,LastName,Email,City,State
+CUST1001,John,Smith,john.smith@example.com,New York,NY
+CUST1002,Jane,Doe,jane.doe@example.com,Los Angeles,CA
+CUST1003,Peter,Jones,peter.jones@example.com,Chicago,IL
+CUST1004,Mary,Williams,mary.w@example.com,Houston,TX
