@@ -32,6 +32,8 @@ All these files will be in the data lake container You have to fetch all three t
 ### Step 1: Set Up Tables in Azure SQL Database
 First, make sure your destination tables exist. Connect to your Azure SQL DB and run the DDL statements. Adjust the column definitions to match your CSV files.
 
+![1.1](/week07/screenshots/week7tasksimage%20(1).png)
+
 ### Step 2: Set Up Linked Services in ADF
 We need two: one for the data lake and one for the SQL database.
 In your ADF, go to the Manage tab.
@@ -42,6 +44,9 @@ In your ADF, go to the Manage tab.
 5. Create an Azure SQL Database Linked Service:
 6. Name it `ls_azuresql_sink`
 7. Connect it to your Azure SQL Database.
+
+![2.1](/week07/screenshots/week7tasksimage%20(2).png)
+![2.2](/week07/screenshots/week7tasksimage%20(3).png)
 
 ### Step 3: Set Up Datasets
 We need one source dataset for each file pattern and one sink dataset for each database table.
@@ -70,6 +75,13 @@ We need one source dataset for each file pattern and one sink dataset for each d
         - Name: `ds_sink_cust_mstr`
         - Linked Service: `ls_azuresql_sink`
         - Table name: Select dbo.CUST_MSTR from the dropdown
+
+![3.1](/week07/screenshots/week7tasksimage%20(4).png)
+![3.2](/week07/screenshots/week7tasksimage%20(5).png)
+![3.3](/week07/screenshots/week7tasksimage%20(6).png)
+![3.4](/week07/screenshots/week7tasksimage%20(7).png)
+![3.5](/week07/screenshots/week7tasksimage%20(8).png)
+![3.6](/week07/screenshots/week7tasksimage%20(9).png)
 
 ### Step 4: Build Pipelines
 
@@ -130,7 +142,11 @@ We need one source dataset for each file pattern and one sink dataset for each d
 4. Mapping:
     - Click "Import schemas" and validate mappings
 
-
+![4.1](/week07/screenshots/week7tasksimage%20(10).png)
+![4.2](/week07/screenshots/week7tasksimage%20(11).png)
+![4.3](/week07/screenshots/week7tasksimage%20(12).png)
+![4.5](/week07/screenshots/week7tasksimage%20(13).png)
+![4.4](/week07/screenshots/week7tasksimage%20(14).png)
 
 ### Step 5: Schedule the Pipeline
 
@@ -144,6 +160,8 @@ We need one source dataset for each file pattern and one sink dataset for each d
 1. Click **Publish all**
 2. Manually trigger with **Trigger now**
 3. Use **Monitor** tab to view runs and debug issues
+
+![Final](/week07/screenshots/week7tasksimage%20(15).png)
 
 ---
 
