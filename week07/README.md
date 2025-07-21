@@ -32,8 +32,6 @@ All these files will be in the data lake container You have to fetch all three t
 ### Step 1: Set Up Tables in Azure SQL Database
 First, make sure your destination tables exist. Connect to your Azure SQL DB and run the DDL statements. Adjust the column definitions to match your CSV files.
 
-![1.1](/week07/screenshots/week7tasksimage%20(1).png)
-
 ### Step 2: Set Up Linked Services in ADF
 We need two: one for the data lake and one for the SQL database.
 In your ADF, go to the Manage tab.
@@ -45,8 +43,9 @@ In your ADF, go to the Manage tab.
 6. Name it `ls_azuresql_sink`
 7. Connect it to your Azure SQL Database.
 
-![2.1](/week07/screenshots/week7tasksimage%20(2).png)
-![2.2](/week07/screenshots/week7tasksimage%20(3).png)
+![2.1](/week07/screenshots/week7tasksimage%20(1).png)
+![2.2](/week07/screenshots/week7tasksimage%20(2).png)
+![2.3](/week07/screenshots/week7tasksimage%20(3).png)
 
 ### Step 3: Set Up Datasets
 We need one source dataset for each file pattern and one sink dataset for each database table.
